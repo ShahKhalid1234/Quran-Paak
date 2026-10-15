@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-arabic: 'Amiri', serif;
+    --font-heading: 'Cinzel', serif;
+  }
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Islamic Geometric Pattern Background */
+.islamic-pattern {
+  background-color: transparent;
+  background-image: radial-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 0),
+                    radial-gradient(rgba(217, 119, 6, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.dark .islamic-pattern {
+  background-image: radial-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 0),
+                    radial-gradient(rgba(217, 119, 6, 0.08) 1px, transparent 0);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.4);
+}
+
+/* Leaflet Map popup customizations */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
